@@ -1,0 +1,28 @@
+{
+  "name": "secure-api-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "User API backend service. Trusts the Gateway's X-Verified-User header and never validates JWTs itself.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint ."
+  },
+  "jest": {
+    "transform": {}
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^30.5.2",
+    "supertest": "^6.3.4"
+  }
+}
